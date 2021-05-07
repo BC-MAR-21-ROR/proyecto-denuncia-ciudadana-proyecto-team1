@@ -1,28 +1,20 @@
 default: &default
   adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV['POSTGRES_USERNAME'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
-
-test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  timeout: 5000
+  username: postgres
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
   host: localhost
-
+  port: 5432
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
-  host: localhost
-
+  <<: *default
+  database: denuncia_ciudadana_dev
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: denuncia_ciudadana_test
 production:
-  <<: *default
-  adapter: postgresql
-  encoding: unicode
-
-staging:
-  <<: *default
-  adapter: postgresql
-  encoding: unicode
+  url: <%= ENV["DATABASE_URL"] %>
+  # heroku create database for us , and sets database URL
