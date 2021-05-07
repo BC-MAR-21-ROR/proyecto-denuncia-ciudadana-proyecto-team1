@@ -51,3 +51,5 @@ end
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+
+gem "rubycritic-small-badge", "~> 0.2.1"
