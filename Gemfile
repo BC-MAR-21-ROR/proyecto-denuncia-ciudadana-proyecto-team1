@@ -44,8 +44,10 @@ group :development do
   gem 'spring'
   gem "rubocop", "~> 1.14"
   gem "rubocop-rails", "~> 2.10"
+  gem "rubycritic", "~> 4.6"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 
