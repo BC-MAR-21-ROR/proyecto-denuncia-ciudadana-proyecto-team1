@@ -52,9 +52,13 @@ group :development do
   gem 'rubocop-rails', '~> 2.10'
   gem 'rubycritic', '~> 4.6'
   gem 'rubycritic-small-badge', '~> 0.2.1'
+  gem "hamlit", "~> 2.15"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+
+
+gem "hamlit-rails", "~> 0.2.3"
