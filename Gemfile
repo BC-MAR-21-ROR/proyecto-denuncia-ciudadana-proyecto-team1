@@ -39,6 +39,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
@@ -54,6 +55,7 @@ group :development do
   gem 'rubycritic-small-badge', '~> 0.2.1'
   gem "hamlit", "~> 2.15"
   gem "hamlit-rails", "~> 0.2.3"
+  gem "simple_form", "~> 5.1"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -63,4 +65,3 @@ end
 
 
 
-gem "simple_form", "~> 5.1"
