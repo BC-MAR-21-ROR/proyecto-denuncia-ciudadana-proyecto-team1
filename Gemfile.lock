@@ -247,6 +247,9 @@ GEM
       tilt
     semantic_range (3.0.0)
     sexp_processor (4.15.2)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -315,6 +318,7 @@ DEPENDENCIES
   rubycritic (~> 4.6)
   rubycritic-small-badge (~> 0.2.1)
   sass-rails (>= 6)
+  simple_form (~> 5.1)
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)

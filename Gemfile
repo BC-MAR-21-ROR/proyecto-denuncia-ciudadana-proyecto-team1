@@ -53,6 +53,7 @@ group :development do
   gem 'rubycritic', '~> 4.6'
   gem 'rubycritic-small-badge', '~> 0.2.1'
   gem "hamlit", "~> 2.15"
+  gem "hamlit-rails", "~> 0.2.3"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -61,4 +62,5 @@ end
 
 
 
-gem "hamlit-rails", "~> 0.2.3"
+
+gem "simple_form", "~> 5.1"
