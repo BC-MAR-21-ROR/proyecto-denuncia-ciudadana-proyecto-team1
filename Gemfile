@@ -59,5 +59,10 @@ group :development do
   gem 'simple_form', '~> 5.1'
 end
 
+group :test do
+  gem "simplecov", "~> 0.21.2"
+  gem "simplecov-small-badge", "~> 0.2.4"
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

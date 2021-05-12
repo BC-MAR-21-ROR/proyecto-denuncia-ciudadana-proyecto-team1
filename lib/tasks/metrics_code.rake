@@ -6,19 +6,24 @@ if Rails.env.development?
   require 'sandi_meter/file_scanner'
 
   { spec: 65, app: 90 }.each do |dir, percentage|
-    RubyCriticSmallBadge.configure do |config|
-      config.minimum_score = percentage
-    end
+    desc "Run rubycritic for #{dir}"
+    task "rubycritic:#{dir}" do
+      RubyCriticSmallBadge.configure do |config|
+        config.minimum_score = percentage
+        config.output_path = "badges/#{dir}"
+      end
 
-    RubyCritic::RakeTask.new("rubycritic:#{dir}") do |task|
-      task.options = %(
-        --custom-format RubyCriticSmallBadge::Report
-        --minimum-score #{RubyCriticSmallBadge.config.minimum_score}
-        --format html
-        --path tmp/rubycritic/#{dir}
-        --format console
-      )
-      task.paths = FileList["#{dir}/**/*.rb"]
+      RubyCritic::RakeTask.new("_rubycritic:#{dir}") do |task|
+        task.options = %(
+          --custom-format RubyCriticSmallBadge::Report
+          --minimum-score #{RubyCriticSmallBadge.config.minimum_score}
+          --format html
+          --path tmp/rubycritic/#{dir}
+          --format console
+        )
+        task.paths = FileList["#{dir}/**/*.rb"]
+      end
+      Rake::Task["_rubycritic:#{dir}"].invoke
     end
   end
 
