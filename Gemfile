@@ -33,8 +33,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem "rspec-rails", "~> 5.0"
-  gem "sqlite3", "~> 1.4"
+  gem 'rspec-rails', '~> 5.0'
 end
 
 group :development do
@@ -53,15 +52,12 @@ group :development do
   gem 'rubocop-rails', '~> 2.10'
   gem 'rubycritic', '~> 4.6'
   gem 'rubycritic-small-badge', '~> 0.2.1'
-  gem "hamlit", "~> 2.15"
-  gem "hamlit-rails", "~> 0.2.3"
-  gem "simple_form", "~> 5.1"
+  gem 'sandi_meter', '~> 1.2'
+  # Front
+  gem 'hamlit', '~> 2.15'
+  gem 'hamlit-rails', '~> 0.2.3'
+  gem 'simple_form', '~> 5.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
-
-
-
